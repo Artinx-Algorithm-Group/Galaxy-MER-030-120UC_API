@@ -1,4 +1,4 @@
-project(Galaxy_camera_USB2)
+project(galaxy_camera_USB2)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake_module)
@@ -89,5 +89,5 @@ target_link_libraries(image_capture_test
 target_include_directories(image_capture_test
   PRIVATE
   ${OpenCV_INCLUDE_DIRECTORIES}
-  /home/artinxmaster/Work/RM/workspace/src/RoboRTS/Galaxy_camera_USB2/include
+  ./include
 )

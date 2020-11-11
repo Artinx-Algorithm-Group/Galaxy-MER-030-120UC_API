@@ -54,7 +54,7 @@ catkin_make --only-pkg-with-deps Galaxy_camera_USB2
 # overlay this workspace
 source devel/setup.bash
 # run the package
-rosrun Galaxy_camera_USB2 Galaxy_camera_USB2_node
+rosrun galaxy_camera_USB2 galaxy_camera_USB2_node
 ```
 
 4. if your node runs successfully, open a new terminal and use rqt to test the publishing image.
