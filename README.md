@@ -1,8 +1,8 @@
 # MER-030-120UC Driver
 
-Author: Jing Yonglin
+Author: Jing Yonglin, Lucain Liu
 
-E-mail: yonglinjing7@gmail.com
+E-mail: yonglinjing7@gmail.com, liuxin.lucian@foxmail.com
 
 MER-030-120UC product page: https://www.daheng-imaging.com/products/ProductDetails.aspx?current=123&productid=2852
 
@@ -23,3 +23,47 @@ MER-030-120UC product page: https://www.daheng-imaging.com/products/ProductDetai
 ## Run
 
 Execute `build.sh` to build the program. `capture_test` will test the capture ability. `capture_as_opencv` will capture and convert the frame into opencv mat, then display the frames in a window. 
+
+--- 
+
+## ROS Package
+
+
+
+### Introduction
+The Camera ROS Package is based on the SDK of [roboRTS](https://github.com/RoboMaster/RoboRTS), which is introduced in its [tutorial](https://robomaster.github.io/RoboRTS-Tutorial/#/sdk_docs/roborts_camera).
+
+
+### Prerequisites
+
+1. follow the above prerequisites to install the driver of the camera.
+2. follow the prerequisites of [roboRTS](https://robomaster.github.io/RoboRTS-Tutorial/#/quick_start/setup_on_manifold2?id=%e8%bd%af%e4%bb%b6%e4%be%9d%e8%b5%96%e9%85%8d%e7%bd%ae) to install ROS and relative package.
+
+### Usage
+
+1. Move the folder **Galaxy_camera_USB2** to your ros workspace. 
+
+2. Open a terminal and run `roscore` 
+
+3. Open a new terminal to build and run.
+
+```bash
+cd ${yourRosWorkspace}/src
+# build the package
+catkin_make --only-pkg-with-deps Galaxy_camera_USB2
+# overlay this workspace
+source devel/setup.bash
+# run the package
+rosrun Galaxy_camera_USB2 Galaxy_camera_USB2_node
+```
+
+4. if your node runs successfully, open a new terminal and use rqt to test the publishing image.
+
+```bash
+rqt_image_view
+```
+
+
+## TODO
+
+Set the exposure and fps of camera.
