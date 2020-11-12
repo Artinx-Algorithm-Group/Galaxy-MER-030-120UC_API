@@ -1,4 +1,4 @@
-project(galaxy_camera_USB2)
+project(galaxy_camera_usb2)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake_module)

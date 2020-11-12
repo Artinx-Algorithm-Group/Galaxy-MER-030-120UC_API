@@ -41,7 +41,7 @@ The Camera ROS Package is based on the SDK of [roboRTS](https://github.com/RoboM
 
 ### Usage
 
-1. Move the folder **Galaxy_camera_USB2** to your ros workspace. 
+1. Move the folder **galaxy_camera_usb2** to your ros workspace. 
 
 2. Open a terminal and run `roscore` 
 
@@ -50,11 +50,11 @@ The Camera ROS Package is based on the SDK of [roboRTS](https://github.com/RoboM
 ```bash
 cd ${yourRosWorkspace}/src
 # build the package
-catkin_make --only-pkg-with-deps Galaxy_camera_USB2
+catkin_make --only-pkg-with-deps galaxy_camera_usb2
 # overlay this workspace
 source devel/setup.bash
 # run the package
-rosrun galaxy_camera_USB2 galaxy_camera_USB2_node
+rosrun galaxy_camera_usb2 galaxy_camera_usb2_node
 ```
 
 4. if your node runs successfully, open a new terminal and use rqt to test the publishing image.
